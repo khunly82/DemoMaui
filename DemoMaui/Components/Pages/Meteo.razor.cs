@@ -15,5 +15,11 @@ namespace DemoMaui.Components.Pages
         {
             Data = await MeteoService.GetMeteoAsync(50.294, 5.1);
         }
+
+        //public async Task LoadData()
+        //{
+        //    Data = await MeteoService.GetMeteoAsync(50.294, 5.1);
+        //    StateHasChanged();
+        //}
     }
 }
