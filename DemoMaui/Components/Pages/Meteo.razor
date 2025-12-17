@@ -1,0 +1,12 @@
+﻿@page "/meteo"
+
+@* @inject MeteoService meteoService; *@
+
+@if(Data == null) {
+    <p>Chargement en cours ...</p>
+}
+else {
+    <p>@Data.Name</p>
+    <p>@Data.Main.Temp °C</p>
+}
+
