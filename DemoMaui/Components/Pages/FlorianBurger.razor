@@ -1,7 +1,13 @@
 ﻿@page "/florian"
-@using DemoMaui.Models
 
 <h1>Page des burgers de @Nom</h1>
+
+<div class="burgers">
+    @foreach (Burger burger in Menu)
+    {
+        <BurgerCard burger="burger"></BurgerCard>
+    }
+</div>
 
 
 @code {
@@ -13,7 +19,7 @@
             Id = 1,
             Name = "Super Giant",
             Price = 42,
-            IsVeagan = false,
+            IsVegan = false,
             ImageUrl = "https://picsum.photos/200"
         },
         new Burger
@@ -21,7 +27,7 @@
             Id = 2,
             Name = "Fish Burger",
             Price = 13,
-            IsVeagan = false,
+            IsVegan = false,
             ImageUrl = "https://picsum.photos/200"
         },
         new Burger
@@ -29,7 +35,7 @@
             Id = 3,
             Name = "Vega Burger",
             Price = 1,
-            IsVeagan = true,
+            IsVegan = true,
             ImageUrl = "https://picsum.photos/200"
         },
     ];

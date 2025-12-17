@@ -1,0 +1,14 @@
+﻿<div class="burger">
+    <img src="@(burger.ImageUrl + "?v=" + Guid.NewGuid())" />
+    <p class="name">@burger.Name</p>
+    <p class="price">@burger.Price €</p>
+    @if (burger.IsVegan)
+    {
+        <label class="vegan">VEGAN</label>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Burger burger { get; set; }
+}
