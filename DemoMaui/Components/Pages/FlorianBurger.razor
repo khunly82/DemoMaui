@@ -1,0 +1,36 @@
+﻿@page "/florian"
+@using DemoMaui.Models
+
+<h1>Page des burgers de @Nom</h1>
+
+
+@code {
+    public string Nom { get; set; } = "Flo";
+
+    public List<Burger> Menu { get; set; } = [
+        new Burger
+        {
+            Id = 1,
+            Name = "Super Giant",
+            Price = 42,
+            IsVeagan = false,
+            ImageUrl = "https://picsum.photos/200"
+        },
+        new Burger
+        {
+            Id = 2,
+            Name = "Fish Burger",
+            Price = 13,
+            IsVeagan = false,
+            ImageUrl = "https://picsum.photos/200"
+        },
+        new Burger
+        {
+            Id = 3,
+            Name = "Vega Burger",
+            Price = 1,
+            IsVeagan = true,
+            ImageUrl = "https://picsum.photos/200"
+        },
+    ];
+}
